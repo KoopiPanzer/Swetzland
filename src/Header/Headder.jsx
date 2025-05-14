@@ -1,31 +1,41 @@
 import React from 'react';
 
-export const Headder = () => {
-  return (
-    <div
-      className="flex flex-col justify-center items-center"
+export const Headder = () => (
+  <div
+    className="flex flex-col justify-center items-center"
+    style={{
+      backgroundImage: "url('https://perito.media/uploads/post/image/93d408cf7eec62d4f470745392c2b2451b11fa7966340c9272422e586aa49b2d/main_johannes-hofmann-PM5a_R83-YQ-unsplash.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      height: '100vh',
+      color: 'white',
+      textAlign: 'center',
+      padding: '20px',
+    }}
+  >
+    <h1
       style={{
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://russagency.ru/upload/Image/catalog/big/19502-2.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        height: '100vh',
-        color: 'white',
-        textAlign: 'center',
+        fontSize: '4rem',
+        fontWeight: 'bold',
+        marginBottom: '30px',
+        textShadow: '3px 3px 6px rgba(0, 0, 0, 0.8)',
+        animation: 'fadeIn 2s ease-in-out',
       }}
     >
-      <h1 className="text-3xl text-white font-bold mb-4">Добро пожаловать</h1>
-      <button
-        style={{
-          padding: '10px 20px',
-          backgroundColor: '#007BFF',
-          color: 'white',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
-      >
-        Больше информации
-      </button>
-    </div>
-  );
-};
+      Добро пожаловать в Швейцарию!
+    </h1>
+    <style>
+      {`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}
+    </style>
+  </div>
+);
